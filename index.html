@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="col-6 lg-col-5 md-col-5 shadow my-4 px-4 py-3 mx-auto">
+      <h2 class="text-center text-decoration-underline text-primary">
+        Mini Jumia Cart
+      </h2>
+      <div id="show" style="display: none; color: red ;">You have successfully deleted an item</div>
+      <input
+        type="text" id="userInput"
+        placeholder="Enter your item here"
+        class="form-control-sm form-control"
+      />
+      <button onclick="addItem()" class="btn btn-primary w-100 my-2">Add Item</button>
+      <button onclick="deleteLast()" class="btn btn-success w-100 my-2">Delete last item</button>
+      <button onclick="deleteAllItems()" class="btn btn-danger w-100 my-2">Delete All Items</button>
+      <div id="display" class="text-center">Your items will show here</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
