@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input id="userInput" type="text" placeholder="Input an item">
+  <button onclick="addItem()">add</button>
+  <div id="showHere">Your item will display here</div>
+  <button onclick="deleteItem()">delete</button>
+
+
+
+   <script>
+    let cart = [];
+    function addItem(){
+      if(userInput.value.trim() == '' ){
+        alert('Input should not be empty!')
+        // console.log(cart)
+      } else{
+        cart.push(userInput.value)
+        // console.log(cart)
+        // document.getElementById('showHere').innerHTML = cart
+        userInput.value = ''
+        displayItems()
+      }
+    }
+
+    function deleteItem(){
+      cart.pop()
+      displayItems()
+    }
+    
+    function displayItems(){
+      document.getElementById('showHere').innerHTML = ''
+      for (let index = 0; index < cart.length; index++) {
+        const element = cart[index];
+        document.getElementById('showHere').innerHTML += `<p>${index + 1}. ${element} </p>`
+        
+      }
+
+    }
+   </script>
+</body>
+</html>
