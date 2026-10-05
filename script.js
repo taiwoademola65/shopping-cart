@@ -1,5 +1,13 @@
 // alert('working')
+
 let cart = JSON.parse(localStorage.getItem('userInput')) || [];
+
+  // if (saveItem) {
+  //   cart = saveItem
+  // }else{
+  //   cart = []
+  // }
+
 function addItem() {
   // let userData =  document.getElementById('userInput').value
   if (userInput.value.trim() == "") {
@@ -14,6 +22,7 @@ function addItem() {
 
 function displayItems() {
   document.getElementById("display").innerHTML = "";
+  
   for (let index = 0; index < cart.length; index++) {
     const element = cart[index];
     document.getElementById("display").innerHTML += `
